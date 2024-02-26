@@ -1,0 +1,28 @@
+<div class="card mb-2" style="background-color: rgba(24,30,37,255);">
+    <div class="card-header">
+        <h5 class="card-title mb-0" style="color: white;">New Posts</h5>
+    </div>
+    <div class="card-body">
+        @foreach(var post in Model)
+        {
+            <div class="mb-3">
+                <h6 class="mb-0">
+                    <a href="/posts/details/@post.Url">
+                        @post.Title
+                    </a>
+                </h6>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    a {
+        color: rgba(199,203,209,255); /* Normal durumda bağlantı rengi */
+        text-decoration: none; /* Bağlantı altı çizgisi kaldırıldı */
+    }
+
+    a:hover {
+        color: white; /* Mouse ile üzerine gelindiğinde bağlantı rengi */
+    }
+</style>
